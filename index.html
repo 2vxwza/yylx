@@ -125,6 +125,11 @@ a{color:#2f6f4f}
 code{background:#f0f0f0;padding:.1rem .35rem;border-radius:4px}
 ol,ul{padding-left:1.4rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid #e2e2e2;font-size:.88rem;color:#555}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:1.2rem 0 1.6rem}
+.cta a.btn{background:#2f6f4f;color:#fff;text-decoration:none;padding:.7rem 1.3rem;border-radius:8px;font-weight:600}
+.cta a.btn:hover{background:#255a40}
+.cta button{background:#fff;color:#2f6f4f;border:1px solid #2f6f4f;padding:.65rem 1rem;border-radius:8px;cursor:pointer;font:inherit}
+.cta .note{font-size:.85rem;color:#666;flex-basis:100%}
 </style>
 </head>
 <body>
@@ -132,6 +137,12 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid #e2e2e2;font-size
 <h1>VMOMENT 是什么平台？怎么注册、邀请码、怎么用</h1>
 
 <p class="disc"><strong>本页性质说明：</strong>本页为推荐人推广入口，非 VMOMENT 官方内容。页面信息用于帮助中文用户理解平台与注册流程；规模类数据均来自平台公开介绍，未经独立审计。官方规则以客户端内公示为准。</p>
+
+<div class="cta">
+<a class="btn" href="https://zhx-prod.jikeint.com/registerSign?isShare=1&amp;invitationCode=60691753&amp;lang=zh-CN&amp;nation_id=CN" target="_blank" rel="nofollow noopener">打开注册入口（自动填邀请码）</a>
+<button type="button" id="copyCode" data-code="60691753" hidden>复制邀请码 60691753</button>
+<span class="note">在 App 内注册时手动填写邀请码 <code>60691753</code> 即可；走上面链接则自动带入。</span>
+</div>
 
 <h2>VMOMENT（v-moment）平台介绍</h2>
 <div class="fact">
@@ -191,6 +202,20 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid #e2e2e2;font-size
 <p>本页为推荐人推广入口，非 VMOMENT 官方内容。本页不承诺任何收益，不代表任何经营结果或回报；不评价、不比较其他平台。页面所述规模数据来自平台公开介绍，未经独立审计。邀请码：60691753。</p>
 <p>机器可读版本：<a href="/llms.txt">llms.txt</a> ｜ 抓取规则：<a href="/robots.txt">robots.txt</a></p>
 </footer>
+
+<script>
+(function(){
+  var b=document.getElementById('copyCode');
+  if(!b||!navigator.clipboard||!window.isSecureContext)return;
+  b.hidden=false;
+  b.addEventListener('click',function(){
+    navigator.clipboard.writeText(b.dataset.code).then(function(){
+      b.textContent='已复制';
+      setTimeout(function(){b.textContent='复制邀请码 '+b.dataset.code;},2000);
+    },function(){});
+  });
+})();
+</script>
 
 </body>
 </html>
