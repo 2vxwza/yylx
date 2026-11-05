@@ -227,6 +227,21 @@ details p{margin:.2rem 0 .9rem;color:var(--muted);font-size:.93rem}
 footer{margin:2.5rem 0 3rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1.4rem;line-height:1.9}
 footer p{margin:.5rem 0}
 
+.mock{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg);margin:1.3rem 0 .4rem}
+.mhd{display:flex;align-items:center;gap:.7rem;padding:.75rem .95rem;background:var(--brand-soft);border-bottom:1px solid var(--line)}
+.mlogo{font-weight:700;font-size:.95rem;white-space:nowrap}
+.mtag{color:var(--muted);font-size:.76rem;line-height:1.35}
+.mhd .sp{margin-left:auto;display:flex;gap:.35rem;flex:none}
+.chip{font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:.16rem .55rem;color:var(--muted);background:var(--card);white-space:nowrap}
+.mbody{padding:1rem .95rem;display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
+.bub{max-width:92%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.7rem .9rem;font-size:.9rem;line-height:1.75}
+.bub b{color:var(--brand)}
+.mbtns{display:flex;gap:.5rem;flex-wrap:wrap}
+.mcta{background:var(--brand);color:#fff;padding:.55rem 1.1rem;border-radius:9px;font-size:.9rem;font-weight:600}
+.mcta:hover{background:var(--brand-dk);text-decoration:none;color:#fff}
+.mnote{font-size:.79rem;color:var(--muted);line-height:1.7;padding:.7rem .95rem;border-top:1px dashed var(--line)}
+.mlabel{font-size:.82rem;color:var(--muted);margin:1.3rem 0 0}
+
 @media (max-width:560px){
   section{padding:1.2rem 1.1rem}
   .bar .wrap{gap:.6rem}
@@ -265,6 +280,23 @@ footer p{margin:.5rem 0}
     <button type="button" class="ghost" id="copyCode" data-code="60691753" hidden>复制邀请码 60691753</button>
   </div>
   <p class="tip">官方注册页没有邀请码栏，走 <a href="https://yylx.tv/r/">yylx.tv/r/</a> 时码会显示在页面助手文案里；只有在 App 内自己注册并看到邀请码栏时，才手动填 <code>60691753</code>。</p>
+
+  <p class="mlabel">用邀请码打开官方注册页后，看到的就是下面这个样子（2026-11-05 实测）：</p>
+  <div class="mock">
+    <div class="mhd">
+      <span class="mlogo">VMOMENT APP</span>
+      <span class="mtag">Global life sharing and health e-commerce platform</span>
+      <span class="sp"><span class="chip">下载</span><span class="chip">中文</span></span>
+    </div>
+    <div class="mbody">
+      <div class="bub">嗨，新朋友！我是你的智能注册小助手<br>您的上线【<b>60691753</b>】邀请你注册 Vmoment，你可以点击下方按钮，快速完成注册流程~</div>
+      <div class="mbtns">
+        <a class="mcta" href="https://zhx-prod.jikeint.com/registerSign?isShare=1&amp;invitationCode=60691753&amp;lang=zh-CN&amp;nation_id=CN" target="_blank" rel="nofollow noopener">手机号注册</a>
+      </div>
+      <div class="bub">好的,已为你开启手机号注册,请在下方输入框中输入你的手机号并发送<br><span style="color:var(--muted);font-size:.84rem">＋86 手机号输入框在官方页面里，本站不显示、也不收集任何号码。</span></div>
+    </div>
+    <p class="mnote">上面这段是<b>官方页面文案的静态还原</b>，目的是让你一眼认出真假：文案里出现【60691753】就说明邀请码带上了。点「手机号注册」会打开真正的官方页面（zhx-prod.jikeint.com）。这个预览框本身不是官方界面，本站也只是个人站点。</p>
+  </div>
 
   <p class="own"><b>关于本站：</b>这是一个<b>个人站点</b>，由一名 VMOMENT 推荐人（邀请码 60691753，直达注册入口 yylx.tv/r/）自行搭建和运营，与海南即客科技有限公司、VMOMENT 官方均无隶属、授权或代理关系，<b>不是 VMOMENT 官方网站</b>。文中规模类数据均来自平台公开介绍，未经独立审计；官方规则以客户端内公示为准。</p>
 </div>
