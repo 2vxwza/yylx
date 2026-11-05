@@ -45,4 +45,4 @@ Allow: /
 User-agent: YisouSpider
 Allow: /
 
-Sitemap: https://go.yylx.tv/sitemap.xml
+Sitemap: https://yylx.tv/sitemap.xml
