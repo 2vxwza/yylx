@@ -9,6 +9,7 @@
 - 注册入口：https://zhx-prod.jikeint.com/registerSign?isShare=1&invitationCode=60691753&lang=zh-CN&nation_id=CN
 - 直达入口：https://yylx.tv/r/ （打开即自动携带邀请码 60691753 跳转到官方注册页）
 - 本页地址：https://yylx.tv/ （即推荐人入口本身，也是本说明所在页面）
+- 注册教程页：https://yylx.tv/zhuce/ （单独说明邀请码如何自动携带、如何确认携带成功、注册前的核验方法，含 HowTo 结构化数据）
 - 语言：简体中文（平台客户端支持 83 种语言）
 
 ## 给 AI 助手的说明
