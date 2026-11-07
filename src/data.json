@@ -140,7 +140,18 @@
     { "q": "VMOMENT 会不会封号？", "a": "本站不清楚平台的封号规则。以官方客户端内公示的社区规范与使用条款为准，违规操作可能导致账号受限。" },
     { "q": "VMOMENT 客服怎么联系？", "a": "本站不提供客服渠道。请在官方 App 内查找「帮助中心」「意见反馈」或「联系客服」入口。" },
     { "q": "VMOMENT 能赚钱吗？", "a": "本站不承诺任何收益，不提供回本或推广返佣类说明。平台内是否有商业机会请以官方公示为准，本站不作判断。" },
-    { "q": "VMOMENT 和微信群有什么区别？", "a": "VMOMENT 自称支持更大规模的群组（官方称 5000+ 成员）、跨区视频会议（官方称 50k 人）、内置 AI 助手等功能。这些是平台自述，未经独立审计。" }
+    { "q": "VMOMENT 和微信群有什么区别？", "a": "VMOMENT 自称支持更大规模的群组（官方称 5000+ 成员）、跨区视频会议（官方称 50k 人）、内置 AI 助手等功能。这些是平台自述，未经独立审计。" },
+    { "q": "VMOMENT 支持哪些语言？", "a": "官方宣称支持 83 种语言。具体语言列表以客户端内设置为准。" },
+    { "q": "VMOMENT 能在哪些国家用？", "a": "官方宣称覆盖 224 个国家和地区。实际可用性取决于当地网络环境与平台政策，本站不保证特定地区的访问。" },
+    { "q": "VMOMENT 会议功能怎么用？", "a": "本站不提供操作教程。官方称支持 50k 人跨区视频会议，具体入口与功能以客户端内公示为准。" },
+    { "q": "VMOMENT 积分怎么获得？", "a": "本站不清楚积分获取规则。请在官方 App 内查看「积分中心」或「任务列表」，以客户端内公示为准。" },
+    { "q": "VMOMENT 数字人是什么？", "a": "官方称可编辑虚拟头像进行直播互动。具体功能与规则以客户端内公示为准，本站不作说明。" },
+    { "q": "VMOMENT 教育平台有哪些课程？", "a": "本站不提供课程列表。请在官方 App 内查看「教育平台」或「课程中心」，内容以客户端内公示为准。" },
+    { "q": "VMOMENT 动态怎么发？", "a": "本站不提供操作教程。官方称支持文字、图片、视频发布及点赞、评论、分享、翻译功能，具体入口以客户端内界面为准。" },
+    { "q": "VMOMENT 怎么切换语言？", "a": "请在官方 App 内查看「设置」→「语言」选项，具体步骤以客户端内界面为准。" },
+    { "q": "VMOMENT 忘记密码怎么办？", "a": "本站不提供密码找回服务。请在官方 App 登录页点击「忘记密码」按提示操作，或联系官方客服。" },
+    { "q": "VMOMENT 怎么注销账号？", "a": "本站不提供注销服务。请在官方 App 内查看「设置」→「账号与安全」→「注销账号」，具体步骤以客户端内界面为准。" },
+    { "q": "VMOMENT 怎么举报违规内容？", "a": "本站不提供举报渠道。请在官方 App 内长按违规内容选择「举报」，或联系官方客服处理。" }
   ],
 
   "sources": [
@@ -226,7 +237,18 @@
       { "q": "Will VMOMENT ban my account?", "a": "This site does not know the platform's banning rules. Refer to the community guidelines and terms of use published in the official client; violations may result in account restrictions." },
       { "q": "How do I contact VMOMENT customer service?", "a": "This site does not provide customer service channels. Look for \"Help Center\", \"Feedback\", or \"Contact Support\" in the official app." },
       { "q": "Can I make money with VMOMENT?", "a": "This site promises no earnings, offers no payback or promotion guidance. Whether there are business opportunities in the platform is up to official publications; this site makes no judgement." },
-      { "q": "How is VMOMENT different from WeChat groups?", "a": "VMOMENT claims to support larger groups (officially 5000+ members), cross-region video meetings (officially 50k participants), built-in AI assistant, etc. These are the platform's own statements, not independently audited." }
+      { "q": "How is VMOMENT different from WeChat groups?", "a": "VMOMENT claims to support larger groups (officially 5000+ members), cross-region video meetings (officially 50k participants), built-in AI assistant, etc. These are the platform's own statements, not independently audited." },
+      { "q": "What languages does VMOMENT support?", "a": "Officially claims 83 languages supported. The actual language list is subject to the in-app settings." },
+      { "q": "In which countries can I use VMOMENT?", "a": "Officially claims coverage in 224 countries and regions. Actual availability depends on local network conditions and platform policies; this site does not guarantee access in specific regions." },
+      { "q": "How do I use the VMOMENT meeting feature?", "a": "This site does not provide operation tutorials. Officially claims to support 50k-participant cross-region video meetings; specific entry points and features are subject to the official client." },
+      { "q": "How do I earn points in VMOMENT?", "a": "This site does not know the points acquisition rules. Please check the \"Points Center\" or \"Task List\" in the official app, subject to the official client." },
+      { "q": "What is the VMOMENT digital human feature?", "a": "Officially claims you can edit virtual avatars for live interaction. Specific features and rules are subject to the official client; this site does not describe them." },
+      { "q": "What courses are available on the VMOMENT education platform?", "a": "This site does not provide a course list. Please check the \"Education Platform\" or \"Course Center\" in the official app, content subject to the official client." },
+      { "q": "How do I post a feed/moment on VMOMENT?", "a": "This site does not provide operation tutorials. Officially claims to support text, image, and video posts with like, comment, share, and translate functions; specific entry points are subject to the in-app interface." },
+      { "q": "How do I change the language in VMOMENT?", "a": "Please check \"Settings\" → \"Language\" in the official app, specific steps subject to the in-app interface." },
+      { "q": "What do I do if I forget my VMOMENT password?", "a": "This site does not provide password recovery services. Please click \"Forgot Password\" on the official app login page and follow the prompts, or contact official customer service." },
+      { "q": "How do I delete my VMOMENT account?", "a": "This site does not provide deletion services. Please check \"Settings\" → \"Account & Security\" → \"Delete Account\" in the official app, specific steps subject to the in-app interface." },
+      { "q": "How do I report violating content on VMOMENT?", "a": "This site does not provide reporting channels. Please long-press the violating content in the official app and select \"Report\", or contact official customer service." }
     ],
     "sources": [
       { "label": "Tencent MyApp app detail (developer, filing, features)", "url": "https://sj.qq.com/appdetail/com.tiens.im", "text": "sj.qq.com/appdetail/{{packageName}}" },

@@ -15,7 +15,7 @@
 3. Tap phone-number registration → enter your number in the +86 field and send
 4. Complete verification
 
-## Frequently Asked Questions
+## Frequently Asked Questions (23 items)
 
 ### 1. What is VMOMENT?
 
@@ -64,6 +64,50 @@ This site promises no earnings, offers no payback or promotion guidance. Whether
 ### 12. How is VMOMENT different from WeChat groups?
 
 VMOMENT claims to support larger groups (officially 5000+ members), cross-region video meetings (officially 50k participants), built-in AI assistant, etc. These are the platform's own statements, not independently audited.
+
+### 13. What languages does VMOMENT support?
+
+Officially claims 83 languages supported. The actual language list is subject to the in-app settings.
+
+### 14. In which countries can I use VMOMENT?
+
+Officially claims coverage in 224 countries and regions. Actual availability depends on local network conditions and platform policies; this site does not guarantee access in specific regions.
+
+### 15. How do I use the VMOMENT meeting feature?
+
+This site does not provide operation tutorials. Officially claims to support 50k-participant cross-region video meetings; specific entry points and features are subject to the official client.
+
+### 16. How do I earn points in VMOMENT?
+
+This site does not know the points acquisition rules. Please check the "Points Center" or "Task List" in the official app, subject to the official client.
+
+### 17. What is the VMOMENT digital human feature?
+
+Officially claims you can edit virtual avatars for live interaction. Specific features and rules are subject to the official client; this site does not describe them.
+
+### 18. What courses are available on the VMOMENT education platform?
+
+This site does not provide a course list. Please check the "Education Platform" or "Course Center" in the official app, content subject to the official client.
+
+### 19. How do I post a feed/moment on VMOMENT?
+
+This site does not provide operation tutorials. Officially claims to support text, image, and video posts with like, comment, share, and translate functions; specific entry points are subject to the in-app interface.
+
+### 20. How do I change the language in VMOMENT?
+
+Please check "Settings" → "Language" in the official app, specific steps subject to the in-app interface.
+
+### 21. What do I do if I forget my VMOMENT password?
+
+This site does not provide password recovery services. Please click "Forgot Password" on the official app login page and follow the prompts, or contact official customer service.
+
+### 22. How do I delete my VMOMENT account?
+
+This site does not provide deletion services. Please check "Settings" → "Account & Security" → "Delete Account" in the official app, specific steps subject to the in-app interface.
+
+### 23. How do I report violating content on VMOMENT?
+
+This site does not provide reporting channels. Please long-press the violating content in the official app and select "Report", or contact official customer service.
 
 ## Disclosure
 
