@@ -134,7 +134,13 @@
     { "q": "vmoment 是正规平台吗？", "a": "本页只给可复核的编号：主体{{operator}}、统一社会信用代码 {{uscc}}、ICP 备案号 {{icp}}、包名 {{packageName}}。有备案不等于持有直销经营许可证。" },
     { "q": "vmoment 和天狮／TIENS 有关系吗？", "a": "没有被证实的关系，本站也不作此宣称。唯一的公开线索是包名 <code>{{packageName}}</code> 里的 tiens 字样，而包名由开发者自选，不能当作主体关联的证据。见<a href=\"#tiens\">关系澄清</a>。" },
     { "q": "安卓商店搜不到怎么办？", "a": "优先用手机自带的应用商店；若确实无结果，可在官方注册页右上角点<b>下载</b>获取安装包地址，安装时留意系统安全提示并确认来源。" },
-    { "q": "注册要花钱吗？", "a": "注册本身不收费。平台内商品与服务的具体收费规则以客户端内公示为准，本站不作说明。" }
+    { "q": "注册要花钱吗？", "a": "注册本身不收费。平台内商品与服务的具体收费规则以客户端内公示为准，本站不作说明。" },
+    { "q": "VMOMENT 怎么提现？", "a": "本站不提供提现指引。平台内的积分兑换、商品交易等规则以客户端内公示为准，涉及资金操作请仔细阅读官方说明并自行判断风险。" },
+    { "q": "VMOMENT 安全吗？隐私政策怎么样？", "a": "本站无法代为判断。建议阅读官方 App 内的隐私政策与用户协议，关注数据收集范围、存储地点、第三方共享条款。对隐私条款有疑虑就不要注册。" },
+    { "q": "VMOMENT 会不会封号？", "a": "本站不清楚平台的封号规则。以官方客户端内公示的社区规范与使用条款为准，违规操作可能导致账号受限。" },
+    { "q": "VMOMENT 客服怎么联系？", "a": "本站不提供客服渠道。请在官方 App 内查找「帮助中心」「意见反馈」或「联系客服」入口。" },
+    { "q": "VMOMENT 能赚钱吗？", "a": "本站不承诺任何收益，不提供回本或推广返佣类说明。平台内是否有商业机会请以官方公示为准，本站不作判断。" },
+    { "q": "VMOMENT 和微信群有什么区别？", "a": "VMOMENT 自称支持更大规模的群组（官方称 5000+ 成员）、跨区视频会议（官方称 50k 人）、内置 AI 助手等功能。这些是平台自述，未经独立审计。" }
   ],
 
   "sources": [
@@ -214,7 +220,13 @@
       { "q": "Where do I type the invite code?", "a": "The official shared sign-up page has no such field. The code is carried by the link parameter <code>invitationCode</code> and shown in the assistant text. Only if you register inside the app and see an invite/referral field do you type <code>{{code}}</code> manually." },
       { "q": "Is VMOMENT a legitimate platform?", "a": "This page only gives checkable identifiers: operator {{operator}}, unified social credit code {{uscc}}, ICP filing {{icp}}, package {{packageName}}. A filing does not equal a direct-selling licence." },
       { "q": "Is VMOMENT related to TIENS?", "a": "No verified relationship, and this site claims none. The only public clue is the string tiens in the package name <code>{{packageName}}</code>, which developers choose freely and which is not evidence of a corporate link." },
-      { "q": "Does registration cost money?", "a": "Registration itself is free. Pricing of goods and services inside the platform is whatever the client publishes; this site does not describe it." }
+      { "q": "Does registration cost money?", "a": "Registration itself is free. Pricing of goods and services inside the platform is whatever the client publishes; this site does not describe it." },
+      { "q": "How do I withdraw money from VMOMENT?", "a": "This site does not provide withdrawal instructions. Rules for points redemption, product transactions, etc. are published in the official client; read the official terms carefully and judge risks yourself for any financial operations." },
+      { "q": "Is VMOMENT safe? What about the privacy policy?", "a": "This site cannot judge on your behalf. Read the privacy policy and terms of service in the official app; pay attention to data collection scope, storage location, and third-party sharing terms. If you have concerns about the privacy terms, do not register." },
+      { "q": "Will VMOMENT ban my account?", "a": "This site does not know the platform's banning rules. Refer to the community guidelines and terms of use published in the official client; violations may result in account restrictions." },
+      { "q": "How do I contact VMOMENT customer service?", "a": "This site does not provide customer service channels. Look for \"Help Center\", \"Feedback\", or \"Contact Support\" in the official app." },
+      { "q": "Can I make money with VMOMENT?", "a": "This site promises no earnings, offers no payback or promotion guidance. Whether there are business opportunities in the platform is up to official publications; this site makes no judgement." },
+      { "q": "How is VMOMENT different from WeChat groups?", "a": "VMOMENT claims to support larger groups (officially 5000+ members), cross-region video meetings (officially 50k participants), built-in AI assistant, etc. These are the platform's own statements, not independently audited." }
     ],
     "sources": [
       { "label": "Tencent MyApp app detail (developer, filing, features)", "url": "https://sj.qq.com/appdetail/com.tiens.im", "text": "sj.qq.com/appdetail/{{packageName}}" },
