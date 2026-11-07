@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "code": "60691753",
+    "host": "yylx.tv",
+    "origin": "https://yylx.tv",
+    "entry": "https://yylx.tv/r/",
+    "officialRegister": "https://zhx-prod.jikeint.com/registerSign?isShare=1&invitationCode=60691753&lang=zh-CN&nation_id=CN",
+    "officialHost": "zhx-prod.jikeint.com",
+    "verifiedOn": "2026-11-05",
+    "modified": "2026-11-05",
+    "operator": "海南即客科技有限公司",
+    "packageName": "com.tiens.im",
+    "uscc": "91460000MACHC4BP50",
+    "icp": "琼ICP备2023003176号-2A",
+    "companyDomain": "jikeint.com"
+  },
+
+  "disclosure": {
+    "short": "个人站点 · 非 VMOMENT 官方",
+    "long": "本站是个人站点，由一名 VMOMENT 推荐人（邀请码 {{code}}）自行搭建运营，与{{operator}}、VMOMENT 官方无隶属、授权或代理关系，不是 VMOMENT 官方网站。页面里的规模数据来自平台公开介绍，未经独立审计；官方规则以客户端内公示为准。",
+    "noClaim": "本站不承诺任何收益，不提供回本、晋升类说明，不评价也不比较其他平台。"
+  },
+
+  "evidence": {
+    "app": "VMOMENT APP",
+    "tagline": "Global life sharing and health e-commerce platform",
+    "chips": ["下载", "中文"],
+    "assistantGreet": "嗨，新朋友！我是你的智能注册小助手",
+    "assistantInvite": "您的上线【{{code}}】邀请你注册 Vmoment，你可以点击下方按钮，快速完成注册流程~",
+    "phoneBtn": "手机号注册",
+    "assistantPhone": "好的,已为你开启手机号注册,请在下方输入框中输入你的手机号并发送",
+    "phonePrefix": "+86"
+  },
+
+  "keyFacts": [
+    { "label": "邀请码", "value": "{{code}}", "note": "由链接参数自动携带" },
+    { "label": "直达入口", "value": "yylx.tv/r/", "note": "打开即进官方注册页" },
+    { "label": "官方页实测", "value": "{{verifiedOn}}", "note": "界面文案逐字记录" }
+  ],
+
+  "steps": [
+    { "name": "打开直达入口", "text": "访问 <a href=\"{{entry}}\">{{entryHost}}</a>，页面跳转到官方注册页 <code>{{officialHost}}/registerSign</code>，邀请码在链接参数里。" },
+    { "name": "认出官方页头", "text": "上方显示 <b>{{app}}</b> 与标语 <b>{{tagline}}</b>，右上角是 <b>下载</b> 和 <b>中文</b>。" },
+    { "name": "核对助手文案里的码", "text": "智能注册小助手显示「{{assistantGreet}}／{{assistantInvite}}」。文案里出现【{{code}}】就说明码已经带上，页面上没有邀请码输入栏。" },
+    { "name": "点手机号注册", "text": "助手回复「{{assistantPhone}}」，随后在带 <code>{{phonePrefix}}</code> 前缀的输入框里填手机号并发送。" },
+    { "name": "完成验证", "text": "按页面提示完成验证码等步骤即可进入平台；需要装客户端时点右上角<b>下载</b>。" }
+  ],
+
+  "stats": [
+    { "value": "224", "unit": "个国家／地区", "note": "支持 83 种语言" },
+    { "value": "5万", "unit": "人在线会议", "note": "单场跨区在线" },
+    { "value": "5000+", "unit": "人群组", "note": "好友数量无上限" },
+    { "value": "5700万", "unit": "家庭用户", "note": "平台公开口径" }
+  ],
+
+  "features": [
+    { "title": "内置 AI 助手", "text": "平台内直接问答与检索。" },
+    { "title": "虚拟数字人", "text": "在线编辑形象，用于直播互动。" },
+    { "title": "教育平台", "text": "课程与培训在同一体系内。" },
+    { "title": "积分体系", "text": "可获取积分并兑换产品。" },
+    { "title": "广场／动态", "text": "图文视频动态，支持点赞、评论、转发、翻译。" },
+    { "title": "跨区会议", "text": "大人数同时在线，无需第三方工具。" }
+  ],
+
+  "positioning": "VMOMENT 定位为<b>全球大健康社交平台</b>，属于即时通讯 + 社群 + 在线会议 + 课程类应用。需要明确：它是通讯与社群工具，<b>不是投资品，也不是理财产品</b>。",
+
+  "verifyRows": [
+    { "k": "开发／运营主体", "v": "{{operator}}", "src": "腾讯应用宝、小米应用商店、苹果 App Store 版权信息" },
+    { "k": "统一社会信用代码", "v": "<code>{{uscc}}</code>", "src": "国家企业信用信息公示系统 gsxt.gov.cn" },
+    { "k": "ICP 备案号", "v": "{{icp}}", "src": "工信部备案管理系统 beian.miit.gov.cn" },
+    { "k": "应用包名", "v": "<code>{{packageName}}</code>", "src": "各安卓应用商店详情页" },
+    { "k": "公司域名", "v": "{{companyDomain}}", "src": "注册入口所在的 {{officialHost}} 与该官网同属一个主体" }
+  ],
+
+  "verifyNote": "有 ICP 备案号说明该 App 完成了工信部备案，<b>不等于持有直销经营许可证</b>。上面几条是第三方公开页面能查到的编号，不代表本站对该公司经营状况或合规性的任何判断。",
+
+  "checks": [
+    "用「{{operator}}」在<b>国家企业信用信息公示系统</b>查经营状态、行政处罚与变更记录。",
+    "用 <code>{{icp}}</code> 在<b>工信部备案管理系统</b>核对备案主体是否一致。",
+    "在 App Store 与安卓应用商店确认客户端是否上架，并核对开发者主体名称是否一致。"
+  ],
+
+  "usage": [
+    { "title": "大群与会议", "text": "加入 5000+ 人群组，或参与跨区在线会议。" },
+    { "title": "AI 助手", "text": "在平台内直接提问，获取指引与信息检索。" },
+    { "title": "虚拟数字人", "text": "在线编辑形象，用于直播与互动场景。" },
+    { "title": "教育平台", "text": "学习平台内课程，了解积分获取与兑换规则。" }
+  ],
+
+  "newbie": "前三天只做两件事：熟悉界面、加入一个活跃的群或会议。建议<b>不进行任何付费动作</b>，也不急着做推广；先把产品本身用明白。",
+
+  "healthNote": "「大健康社交」指平台把健康类内容的课程、社群与协作工具（会议、直播、数字人、积分兑换）放在同一个通讯体系内。内容质量取决于具体发布者，需要你自行判断。",
+
+  "download": {
+    "ios": "iOS 在 App Store 搜索 VMOMENT。",
+    "android": "安卓优先用手机自带的应用商店搜索；若商店内暂无结果，可在官方注册页右上角点<b>下载</b>获取安装包地址。安装非应用商店来源的包时，请留意系统安全提示并确认来源。"
+  },
+
+  "tiens": {
+    "conclusion": "没有任何被证实的关系，本站也不作这种宣称。",
+    "lead": "之所以把这一段写在页面上，是因为确实有人在把两者放在一起问，而你能查到的公开线索只有一条：VMOMENT 的安卓应用包名是 <code>{{packageName}}</code>，包名里的 <b>tiens</b> 字样会让「TIENS」「天狮」和这个 App 在商店页与搜索结果里同屏出现。<b>包名由开发者自行选取，不能作为两个主体存在关联的证据。</b>",
+    "rows": [
+      { "k": "VMOMENT 的运营主体", "v": "{{operator}}，统一社会信用代码 <code>{{uscc}}</code>，注册地海南省" },
+      { "k": "中文语境里的「天狮／TIENS」", "v": "通常指天津的<b>天狮集团</b>，另一家法人，主营保健品与化妆品的直销业务，历史远早于 VMOMENT" }
+    ],
+    "warn": "<b>如果有人用这套说法劝你加入</b>——「这是天狮的新项目」「TIENS 官方平台」——请直接向对方索要<b>书面证据</b>：商标授权文件、两个主体之间的关系证明、以及直销经营许可证编号。拿不出书面证据，就不要投入任何资金或人脉。",
+    "homophone": "「天师」「天使」多数是「天狮」的输入误差或谐音，和 VMOMENT、和天狮集团都没有对应关系。"
+  },
+
+  "faq": [
+    { "q": "vmoment 是什么平台？", "a": "定位为「全球大健康社交」的即时通讯与社群平台，核心能力是大群组、跨区在线会议、内置 AI 助手、虚拟数字人、教育平台和积分体系。是通讯与课程类应用，不是投资品。" },
+    { "q": "vmoment 怎么注册？", "a": "打开 <a href=\"{{entry}}\">{{entryHost}}</a> → 官方对话式注册页显示「{{assistantInvite}}」→ 点「{{phoneBtn}}」→ 在 {{phonePrefix}} 输入框填手机号并发送 → 按提示完成验证。页面上没有邀请码输入栏，实测步骤见<a href=\"/zhuce/\">注册教程</a>。" },
+    { "q": "邀请码要填在哪一栏？", "a": "官方分享注册页没有这一栏。码由链接参数 <code>invitationCode</code> 自动携带，并显示在助手文案里。只有在 App 内自行注册且界面出现邀请码／推荐码栏时才需要手动填 <code>{{code}}</code>。" },
+    { "q": "vmoment 是正规平台吗？", "a": "本页只给可复核的编号：主体{{operator}}、统一社会信用代码 {{uscc}}、ICP 备案号 {{icp}}、包名 {{packageName}}。有备案不等于持有直销经营许可证。" },
+    { "q": "vmoment 和天狮／TIENS 有关系吗？", "a": "没有被证实的关系，本站也不作此宣称。唯一的公开线索是包名 <code>{{packageName}}</code> 里的 tiens 字样，而包名由开发者自选，不能当作主体关联的证据。见<a href=\"#tiens\">关系澄清</a>。" },
+    { "q": "安卓商店搜不到怎么办？", "a": "优先用手机自带的应用商店；若确实无结果，可在官方注册页右上角点<b>下载</b>获取安装包地址，安装时留意系统安全提示并确认来源。" },
+    { "q": "注册要花钱吗？", "a": "注册本身不收费。平台内商品与服务的具体收费规则以客户端内公示为准，本站不作说明。" }
+  ],
+
+  "sources": [
+    { "label": "腾讯应用宝应用详情（开发商、备案号、功能介绍）", "url": "https://sj.qq.com/appdetail/com.tiens.im", "text": "sj.qq.com/appdetail/{{packageName}}" },
+    { "label": "小米应用商店应用详情（包名、开发者）", "url": "https://r.app.xiaomi.com/details?id=com.tiens.im", "text": "r.app.xiaomi.com/details?id={{packageName}}" },
+    { "label": "苹果 App Store 上架记录（版权主体）", "url": "https://apps.apple.com/app/id6450173829", "text": "apps.apple.com/app/id6450173829" },
+    { "label": "国家企业信用信息公示系统", "url": "https://www.gsxt.gov.cn/", "text": "gsxt.gov.cn" },
+    { "label": "工信部备案管理系统", "url": "https://beian.miit.gov.cn/", "text": "beian.miit.gov.cn" },
+    { "label": "百度百科 VMOMENT 词条（功能与定位描述）", "url": "https://baike.baidu.com/item/VMOMENT/66804070", "text": "baike.baidu.com/item/VMOMENT" }
+  ],
+
+  "zhuceConfirm": [
+    "地址栏跳转后落在 <code>{{officialHost}}</code>，说明进的是官方域，不是仿站。",
+    "助手文案里出现【<b>{{code}}</b>】，说明 <code>invitationCode</code> 参数生效。",
+    "没有出现这串数字，说明走的是普通注册入口，改用 <a href=\"{{entry}}\">{{entryHost}}</a> 重新打开。",
+    "官方页面<b>没有邀请码输入栏</b>，所以不存在「填错栏位」；只有 App 内自行注册且看到邀请码／推荐码栏时才手动填。"
+  ],
+
+  "zhuceFaq": [
+    { "q": "没有邀请码能注册吗？", "a": "能完成注册，但首次注册时带上码可以加入新手社群。注册之后再找填写入口，界面上通常已经没有这一栏了。" },
+    { "q": "注册要花钱吗？", "a": "注册本身不收费。平台内商品与服务的具体收费规则以客户端内公示为准，本站不作说明。" },
+    { "q": "手机号会发给这个网站吗？", "a": "不会。本站是静态页面，页面上没有任何输入框；手机号只在官方页面里提交给官方。" },
+    { "q": "要装 App 才能注册吗？", "a": "不必先装：官方注册页是网页版对话流程。需要客户端时点页面右上角<b>下载</b>；iOS 在 App Store 搜索 VMOMENT，安卓优先用自带应用商店。" }
+  ],
+
+  "nav": [    { "href": "#register", "text": "注册" },
+    { "href": "#platform", "text": "是什么" },
+    { "href": "#verify", "text": "核验" },
+    { "href": "#tiens", "text": "天狮关系" },
+    { "href": "#faq", "text": "问答" },
+    { "href": "/zhuce/", "text": "注册教程" }
+  ],
+
+  "toc": [
+    { "href": "#look", "text": "官方页长这样" },
+    { "href": "#register", "text": "注册流程实测" },
+    { "href": "#platform", "text": "平台能力" },
+    { "href": "#verify", "text": "可核验信息" },
+    { "href": "#usage", "text": "怎么用" },
+    { "href": "#islegit", "text": "自己核验三步" },
+    { "href": "#tiens", "text": "天狮关系澄清" },
+    { "href": "#faq", "text": "常见问题" },
+    { "href": "#sources", "text": "参考来源" }
+  ]
+}

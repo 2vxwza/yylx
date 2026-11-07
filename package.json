@@ -1,0 +1,11 @@
+{
+  "name": "yylx-tv",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "yylx.tv — VMOMENT 中文指引（个人站点）源码与构建",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "verify": "node src/build.mjs --check && node src/check.mjs"
+  }
+}
