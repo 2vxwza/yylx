@@ -204,16 +204,16 @@
     "verifyNote": "An ICP filing means the app completed MIIT filing; it <b>does not mean</b> the company holds a direct-selling licence. The rows above are identifiers from public third-party pages, not this site's judgement on the company's conduct or compliance.",
     "tiens": {
       "conclusion": "No verified relationship exists, and this site makes no such claim.",
-      "lead": "The only public clue is the Android package name <code>{{packageName}}</code>: the string <b>tiens</b> makes \"TIENS\" / \"Tianshi\" and this app appear together in store pages and search results. <b>A package name is chosen by the developer and is not evidence of a corporate relationship.</b>",
-      "warn": "<b>If someone uses this story to recruit you</b> — \"this is Tianshi's new project\", \"TIENS official platform\" — ask for <b>written proof</b>: trademark authorisation, proof of relationship between the two entities, and a direct-selling licence number. Without written proof, do not commit money or contacts.",
-      "homophone": "\"Tianshi\" / \"angel\" homophones are usually typing errors for \"Tianshi (Tianshi Group)\" and map to neither VMOMENT nor Tianshi Group."
+      "lead": "The only public clue is the Android package name <code>{{packageName}}</code>: the string <b>tiens</b> makes \"TIENS\" and this app appear together in store pages and search results. <b>A package name is chosen by the developer and is not evidence of a corporate relationship.</b>",
+      "warn": "<b>If someone uses this story to recruit you</b> — \"this is TIENS' new project\", \"TIENS official platform\" — ask for <b>written proof</b>: trademark authorisation, proof of relationship between the two entities, and a direct-selling licence number. Without written proof, do not commit money or contacts.",
+      "homophone": "\"TIENS\" refers to TIENS Group (天狮集团); homophones or typing errors map to neither VMOMENT nor TIENS Group."
     },
     "faq": [
       { "q": "What is VMOMENT?", "a": "A messaging and community app positioned as \"global health-oriented social\": large groups, cross-region meetings, built-in AI assistant, virtual digital humans, education platform and points. It is a communication and course app, not an investment product." },
       { "q": "How do I register?", "a": "Open <a href=\"{{entry}}\">{{entryHost}}</a> → the official chat-style sign-up page shows the invite message → tap phone-number registration → enter your number and send → complete verification. There is no invite-code input box; see the step-by-step guide on the Chinese page." },
       { "q": "Where do I type the invite code?", "a": "The official shared sign-up page has no such field. The code is carried by the link parameter <code>invitationCode</code> and shown in the assistant text. Only if you register inside the app and see an invite/referral field do you type <code>{{code}}</code> manually." },
       { "q": "Is VMOMENT a legitimate platform?", "a": "This page only gives checkable identifiers: operator {{operator}}, unified social credit code {{uscc}}, ICP filing {{icp}}, package {{packageName}}. A filing does not equal a direct-selling licence." },
-      { "q": "Is VMOMENT related to Tianshi / TIENS?", "a": "No verified relationship, and this site claims none. The only public clue is the string tiens in the package name <code>{{packageName}}</code>, which developers choose freely and which is not evidence of a corporate link." },
+      { "q": "Is VMOMENT related to TIENS?", "a": "No verified relationship, and this site claims none. The only public clue is the string tiens in the package name <code>{{packageName}}</code>, which developers choose freely and which is not evidence of a corporate link." },
       { "q": "Does registration cost money?", "a": "Registration itself is free. Pricing of goods and services inside the platform is whatever the client publishes; this site does not describe it." }
     ],
     "sources": [
@@ -243,7 +243,7 @@
       "register": "How to register (verified flow)",
       "platform": "What VMOMENT can do",
       "verify": "Operator and checkable identifiers",
-      "tiens": "Tianshi / TIENS and VMOMENT: what is the relationship?",
+      "tiens": "TIENS and VMOMENT: what is the relationship?",
       "faq": "Frequently asked questions",
       "sources": "Sources"
     },
