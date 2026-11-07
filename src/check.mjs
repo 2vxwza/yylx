@@ -7,7 +7,7 @@ const ROOT = join(SRC, '..');
 const d = JSON.parse(readFileSync(join(SRC, 'data.json'), 'utf8'));
 const CODE = d.meta.code;
 
-const files = ['index.html', join('zhuce', 'index.html')];
+const files = ['index.html', join('zhuce', 'index.html'), join('en', 'index.html')];
 const text = ['llms.txt', 'sitemap.xml', join('assets', 'site.css'), join('r', 'index.html')];
 const errs = [];
 const warn = [];
@@ -75,16 +75,17 @@ for (const f of [...files, 'llms.txt']) {
 /* 5 — per-page required elements */
 for (const f of files) {
   const html = read(f);
-  for (const need of ['<link rel="canonical"', 'name="description"', 'property="og:title"', 'lang="zh-CN"', 'viewport']) {
+  for (const need of ['<link rel="canonical"', 'name="description"', 'property="og:title"', 'viewport']) {
     if (!html.includes(need)) fail(f, `缺少 ${need}`);
   }
-  if (!/个人站点/.test(html)) fail(f, '缺少「个人站点」性质声明');
-  if (!/不是 VMOMENT 官方|非 VMOMENT 官方|非官方/.test(html)) fail(f, '缺少「非官方」声明');
+  if (!/lang="(zh-CN|en)"/.test(html)) fail(f, '缺少 lang 声明（zh-CN 或 en）');
+  if (!/个人站点|personal site/i.test(html)) fail(f, '缺少「个人站点 / personal site」性质声明');
+  if (!/不是 VMOMENT 官方|非 VMOMENT 官方|非官方|not VMOMENT official|not official/i.test(html)) fail(f, '缺少「非官方 / not official」声明');
   if (!html.includes(CODE)) fail(f, `页面未包含邀请码 ${CODE}`);
 }
 
 /* 6 — links resolve */
-const known = new Set(['/', '/zhuce/', '/llms.txt', '/robots.txt', '/sitemap.xml', '/assets/site.css', '/r/', '/index.html']);
+const known = new Set(['/', '/zhuce/', '/en/', '/llms.txt', '/robots.txt', '/sitemap.xml', '/assets/site.css', '/r/', '/index.html']);
 for (const f of files) {
   const html = read(f);
   for (const m of html.matchAll(/href="(\/[^"#]*?)(?:#[^"]*)?"/g)) {

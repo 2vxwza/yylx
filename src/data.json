@@ -160,6 +160,102 @@
     { "q": "要装 App 才能注册吗？", "a": "不必先装：官方注册页是网页版对话流程。需要客户端时点页面右上角<b>下载</b>；iOS 在 App Store 搜索 VMOMENT，安卓优先用自带应用商店。" }
   ],
 
+  "en": {
+    "title": "VMOMENT: what it is, how to register, invite code 60691753 | yylx.tv",
+    "desc": "English guide to VMOMENT (v-moment): verified sign-up flow, how invite code 60691753 is carried automatically, platform capabilities and verifiable company identifiers. Personal site, not VMOMENT official.",
+    "question": "What is VMOMENT, and how do I register with invite code 60691753?",
+    "lead": "VMOMENT is a messaging and community app positioned as \"global health-oriented social\". It is <b>not an investment product</b>. Registration uses a phone number; the official sign-up page is a <b>chat-style flow with no invite-code field</b> — the code travels in the link parameter.",
+    "points": [
+      "Open <a href=\"{{entry}}\">{{entryHost}}</a> and you land on the official sign-up page with invite code <b>{{code}}</b> attached automatically.",
+      "If the assistant's message shows [ <b>{{code}}</b> ] the code is active; if the digits are absent you entered the plain sign-up flow.",
+      "Operator, ICP filing and package name are checkable in public registries; an ICP filing <b>does not equal</b> a direct-selling licence."
+    ],
+    "note": "Personal site · not VMOMENT official",
+    "basis": "verified against the official sign-up page plus public app-store and registry entries",
+    "steps": [
+      { "name": "Open the entry", "text": "Visit <a href=\"{{entry}}\">{{entryHost}}</a>; it redirects to the official sign-up page <code>{{officialHost}}/registerSign</code> with the code in the URL parameters." },
+      { "name": "Recognise the official header", "text": "The top shows <b>{{app}}</b> and the tagline <b>{{tagline}}</b>, with <b>Download</b> and language controls at the top right." },
+      { "name": "Check the code in the assistant text", "text": "The assistant greets you and states that your upstream [{{code}}] invited you. Seeing [{{code}}] confirms the code is attached; there is no invite-code input box." },
+      { "name": "Tap phone-number registration", "text": "The assistant opens phone registration; enter your number in the field prefixed <code>{{phonePrefix}}</code> and send." },
+      { "name": "Finish verification", "text": "Complete the verification prompts to enter the platform; tap <b>Download</b> at the top right if you want the client." }
+    ],
+    "stats": [
+      { "value": "224", "unit": "countries / regions", "note": "83 languages supported" },
+      { "value": "50k", "unit": "participants per meeting", "note": "single cross-region session" },
+      { "value": "5000+", "unit": "members per group", "note": "no friend-count cap" },
+      { "value": "57M", "unit": "household users", "note": "platform's public figure" }
+    ],
+    "features": [
+      { "title": "Built-in AI assistant", "text": "Q&A and search inside the platform." },
+      { "title": "Virtual digital humans", "text": "Edit an avatar for live interaction." },
+      { "title": "Education platform", "text": "Courses and training in the same system." },
+      { "title": "Points system", "text": "Earn points and redeem products." },
+      { "title": "Feed / moments", "text": "Text, image and video posts with like, comment, share, translate." },
+      { "title": "Cross-region meetings", "text": "Large concurrent sessions without third-party tools." }
+    ],
+    "positioning": "VMOMENT positions itself as a <b>global health-oriented social platform</b>: instant messaging + communities + online meetings + courses. To be clear: it is a communication and community tool, <b>not an investment or wealth-management product</b>.",
+    "verifyRows": [
+      { "k": "Developer / operator", "v": "{{operator}}", "src": "Tencent MyApp, Xiaomi App Store, Apple App Store copyright fields" },
+      { "k": "Unified social credit code", "v": "<code>{{uscc}}</code>", "src": "National enterprise credit information system gsxt.gov.cn" },
+      { "k": "ICP filing number", "v": "{{icp}}", "src": "MIIT filing system beian.miit.gov.cn" },
+      { "k": "App package name", "v": "<code>{{packageName}}</code>", "src": "Android app-store detail pages" },
+      { "k": "Company domain", "v": "{{companyDomain}}", "src": "the sign-up host {{officialHost}} belongs to the same operator" }
+    ],
+    "verifyNote": "An ICP filing means the app completed MIIT filing; it <b>does not mean</b> the company holds a direct-selling licence. The rows above are identifiers from public third-party pages, not this site's judgement on the company's conduct or compliance.",
+    "tiens": {
+      "conclusion": "No verified relationship exists, and this site makes no such claim.",
+      "lead": "The only public clue is the Android package name <code>{{packageName}}</code>: the string <b>tiens</b> makes \"TIENS\" / \"Tianshi\" and this app appear together in store pages and search results. <b>A package name is chosen by the developer and is not evidence of a corporate relationship.</b>",
+      "warn": "<b>If someone uses this story to recruit you</b> — \"this is Tianshi's new project\", \"TIENS official platform\" — ask for <b>written proof</b>: trademark authorisation, proof of relationship between the two entities, and a direct-selling licence number. Without written proof, do not commit money or contacts.",
+      "homophone": "\"Tianshi\" / \"angel\" homophones are usually typing errors for \"Tianshi (Tianshi Group)\" and map to neither VMOMENT nor Tianshi Group."
+    },
+    "faq": [
+      { "q": "What is VMOMENT?", "a": "A messaging and community app positioned as \"global health-oriented social\": large groups, cross-region meetings, built-in AI assistant, virtual digital humans, education platform and points. It is a communication and course app, not an investment product." },
+      { "q": "How do I register?", "a": "Open <a href=\"{{entry}}\">{{entryHost}}</a> → the official chat-style sign-up page shows the invite message → tap phone-number registration → enter your number and send → complete verification. There is no invite-code input box; see the step-by-step guide on the Chinese page." },
+      { "q": "Where do I type the invite code?", "a": "The official shared sign-up page has no such field. The code is carried by the link parameter <code>invitationCode</code> and shown in the assistant text. Only if you register inside the app and see an invite/referral field do you type <code>{{code}}</code> manually." },
+      { "q": "Is VMOMENT a legitimate platform?", "a": "This page only gives checkable identifiers: operator {{operator}}, unified social credit code {{uscc}}, ICP filing {{icp}}, package {{packageName}}. A filing does not equal a direct-selling licence." },
+      { "q": "Is VMOMENT related to Tianshi / TIENS?", "a": "No verified relationship, and this site claims none. The only public clue is the string tiens in the package name <code>{{packageName}}</code>, which developers choose freely and which is not evidence of a corporate link." },
+      { "q": "Does registration cost money?", "a": "Registration itself is free. Pricing of goods and services inside the platform is whatever the client publishes; this site does not describe it." }
+    ],
+    "sources": [
+      { "label": "Tencent MyApp app detail (developer, filing, features)", "url": "https://sj.qq.com/appdetail/com.tiens.im", "text": "sj.qq.com/appdetail/{{packageName}}" },
+      { "label": "Xiaomi App Store detail (package, developer)", "url": "https://r.app.xiaomi.com/details?id=com.tiens.im", "text": "r.app.xiaomi.com/details?id={{packageName}}" },
+      { "label": "Apple App Store listing (copyright holder)", "url": "https://apps.apple.com/app/id6450173829", "text": "apps.apple.com/app/id6450173829" },
+      { "label": "National enterprise credit information system", "url": "https://www.gsxt.gov.cn/", "text": "gsxt.gov.cn" },
+      { "label": "MIIT filing system", "url": "https://beian.miit.gov.cn/", "text": "beian.miit.gov.cn" },
+      { "label": "Baidu Baike VMOMENT entry (features and positioning)", "url": "https://baike.baidu.com/item/VMOMENT/66804070", "text": "baike.baidu.com/item/VMOMENT" }
+    ],
+    "disclosure": {
+      "long": "This is a personal site run by an independent VMOMENT referrer (invite code {{code}}). It is not affiliated with, authorised by, or an agent of {{operator}} or VMOMENT official, and is not the official VMOMENT website. Scale figures come from the platform's public descriptions and are not independently audited; official rules are those shown in the client.",
+      "noClaim": "This site promises no earnings, offers no payback or promotion guidance, and does not evaluate or compare other platforms."
+    },
+    "next": "Next: open the official sign-up page with the invite code attached",
+    "nextText": "The entry attaches invite code <b>{{code}}</b> automatically and lands on <code>{{officialHost}}</code>. Your phone number is submitted only on the official page; this site collects nothing.",
+    "openEntry": "Open the sign-up entry",
+    "zhGuide": "Chinese step-by-step guide",
+    "copyCode": "Copy invite code",
+    "copyAnswer": "Copy the whole answer",
+    "answerBadge": "Answer",
+    "verified": "Verified",
+    "sourcesCount": "public sources",
+    "tocTitle": "On this page",
+    "keyInfo": "Key facts",
+    "sections": {
+      "register": "How to register (verified flow)",
+      "platform": "What VMOMENT can do",
+      "verify": "Operator and checkable identifiers",
+      "tiens": "Tianshi / TIENS and VMOMENT: what is the relationship?",
+      "faq": "Frequently asked questions",
+      "sources": "Sources"
+    },
+    "registerLead": "Five steps recorded from the official sign-up page on {{verifiedOn}}. The page has <b>no invite-code input field</b>; the code lives in the link parameter <code>invitationCode</code>.",
+    "officialLinkNote": "Official sign-up page carrying the code:",
+    "platformCaption": "Figures above are the platform's public statements, not independently audited.",
+    "verifyLead": "Each row can be re-checked by you in an official system; these are identifiers, not this site's opinions.",
+    "tiensLeadIn": "Conclusion first:",
+    "faqTitle": "Frequently asked questions",
+    "sourcesLead": "Operator and qualification information on this page comes from the public pages below. They are third-party sources, not official statements; where they conflict with official publications, the official version prevails."
+  },
+
   "nav": [    { "href": "#register", "text": "注册" },
     { "href": "#platform", "text": "是什么" },
     { "href": "#verify", "text": "核验" },
