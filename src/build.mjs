@@ -26,6 +26,32 @@ const t = (s) => {
 };
 const amp = (u) => u.replace(/&/g, '&amp;');
 
+const ICONS = {
+  spark: '<path d="M12 3.2l1.9 5 5 1.9-5 1.9-1.9 5-1.9-5-5-1.9 5-1.9z"/><path d="M18.4 15.6l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/>',
+  chat: '<path d="M4.5 5h15v10.5h-9L4.5 19z"/><path d="M8 9h8M8 12h5"/>',
+  list: '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>',
+  grid: '<rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/>',
+  shield: '<path d="M12 3.2l7 2.8v6c0 4.1-2.9 7.5-7 8.8-4.1-1.3-7-4.7-7-8.8V6z"/><path d="M9 12l2.2 2.2 4.3-4.4"/>',
+  book: '<path d="M5 5.4A2.4 2.4 0 017.4 3H19v14.6H7.4A2.4 2.4 0 005 20z"/><path d="M8.5 7h7M8.5 10.5h7"/>',
+  badge: '<circle cx="12" cy="12" r="8.4"/><path d="M8.4 12.2l2.4 2.3 4.6-4.9"/>',
+  link: '<path d="M10.2 13.8a3.6 3.6 0 005.1 0l2.4-2.4a3.6 3.6 0 00-5.1-5.1L11.4 7.5"/><path d="M13.8 10.2a3.6 3.6 0 00-5.1 0l-2.4 2.4a3.6 3.6 0 005.1 5.1l1.2-1.2"/>',
+  help: '<circle cx="12" cy="12" r="8.4"/><path d="M9.6 9.5a2.5 2.5 0 114 2.1c-.9.6-1.6 1.1-1.6 2.1"/><path d="M12 17h.01"/>',
+  source: '<path d="M6.5 3h7.6l4.4 4.4V21h-12z"/><path d="M14 3v5h5"/><path d="M9.5 13h6M9.5 16.5h4"/>',
+  ai: '<rect x="4" y="7.5" width="16" height="11.5" rx="3"/><path d="M12 3.5v4M9 12.5h.01M15 12.5h.01M9.8 16h4.4"/>',
+  avatar: '<circle cx="12" cy="8.6" r="3.4"/><path d="M5.2 20a6.8 6.8 0 0113.6 0"/>',
+  edu: '<path d="M3.2 8.2L12 4.2l8.8 4-8.8 4z"/><path d="M7.2 10.6V16c0 1.4 2.4 2.4 4.8 2.4s4.8-1 4.8-2.4v-5.4"/>',
+  coin: '<circle cx="12" cy="12" r="8.4"/><path d="M12 7.6v8.8M9.6 10.2h4.8M9.6 13.8h4.8"/>',
+  feed: '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 12.6h4.6"/><circle cx="15.8" cy="15.4" r="1.7"/>',
+  meeting: '<rect x="3" y="6.5" width="12" height="11" rx="2.6"/><path d="M15 10.8l6-3v8.4l-6-3z"/>',
+  globe: '<circle cx="12" cy="12" r="8.4"/><path d="M3.6 12h16.8M12 3.6c2.4 2.6 2.4 14.2 0 16.8-2.4-2.6-2.4-14.2 0-16.8z"/>',
+  phone: '<rect x="7" y="3" width="10" height="18" rx="2.6"/><path d="M10.8 18h2.4"/>',
+  copy: '<rect x="9" y="9" width="11" height="11" rx="2.2"/><path d="M5.2 15V5.2H15"/>',
+  ask: '<circle cx="12" cy="12" r="8.4"/><path d="M12 8.2v4.4M12 15.6h.01"/>'
+};
+const icon = (n, cls = 'ico') => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${ICONS[n] || ICONS.spark}</svg>`;
+const FEATURE_ICONS = ['ai', 'avatar', 'edu', 'coin', 'feed', 'meeting'];
+const USAGE_ICONS = ['meeting', 'ai', 'avatar', 'edu'];
+
 const head = ({ title, desc, path, canonical, ld, ogType = 'website' }) => `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -67,25 +93,80 @@ ${d.nav.map((n) => `      <a href="${n.href.startsWith('#') ? base + n.href : n.
 
 const hero = () => `<div class="band">
   <div class="shell hero">
-    <span class="eyebrow">${d.disclosure.short}</span>
-    <h1 class="display">VMOMENT 是什么平台？怎么注册、邀请码、怎么用</h1>
-    <p class="lede">给中文用户的 v-moment 新手指南：官方注册页实测流程、邀请码 ${d.meta.code} 如何自动携带、平台能力、可逐条复核的主体编号，以及天狮／TIENS 关系澄清。</p>
-    <div class="ctas">
-      <a class="btn" href="${d.meta.entry}" rel="nofollow noopener">打开注册入口</a>
-      <button type="button" class="btn ghost" id="copy" data-code="${d.meta.code}">复制邀请码 ${d.meta.code}</button>
-    </div>
-    <div class="facts">
-${d.keyFacts.map((f) => `      <div class="fact"><div class="l">${f.label}</div><div class="v">${t(f.value)}</div><div class="n">${t(f.note)}</div></div>`).join('\n')}
-    </div>
+    <div class="ask">${icon('ask', 'ask-i')}<p>${d.answer.question}</p></div>
+    <article class="answer" aria-label="答案摘要">
+      <div class="answer-h">
+        <span class="badge">${icon('spark', 'badge-i')}答案</span>
+        <span class="answer-meta">实测 ${t('{{verifiedOn}}')} · <a href="#sources">${d.sources.length} 条公开来源</a></span>
+      </div>
+      <h1 class="display">VMOMENT 是什么平台？怎么注册、邀请码、怎么用</h1>
+      <p class="answer-lead">${t(d.answer.lead)}</p>
+      <ol class="points">
+${d.answer.points.map((p) => `        <li>${t(p)}</li>`).join('\n')}
+      </ol>
+      <div class="facts">
+${d.keyFacts.map((f) => `        <div class="fact"><div class="l">${f.label}</div><div class="v">${t(f.value)}</div><div class="n">${t(f.note)}</div></div>`).join('\n')}
+      </div>
+      <div class="answer-f">
+        <a class="btn" href="${d.meta.entry}" rel="nofollow noopener">打开注册入口</a>
+        <button type="button" class="btn ghost" id="copy" data-code="${d.meta.code}">${icon('copy', 'btn-i')}<span class="btn-t">复制邀请码 ${d.meta.code}</span></button>
+        <button type="button" class="btn ghost" id="copyAnswer">${icon('copy', 'btn-i')}<span class="btn-t">复制整段答案</span></button>
+      </div>
+      <p class="answer-note">${d.disclosure.short} · 依据：${d.answer.basis}。</p>
+    </article>
   </div>
 </div>
 `;
 
-const sec = (id, idx, title, body) => `    <section id="${id}" aria-labelledby="h-${id}">
-      <div class="sec-h"><span class="idx">${String(idx).padStart(2, '0')}</span><h2 id="h-${id}">${title}</h2></div>
+const sec = (id, idx, title, body, ic = 'spark') => `    <section id="${id}" class="acard" aria-labelledby="h-${id}">
+      <div class="acard-h">${icon(ic, 'acard-i')}<h2 id="h-${id}">${title}</h2><span class="idx">${String(idx).padStart(2, '0')}</span></div>
+      <div class="acard-b">
 ${body}
+      </div>
     </section>
 `;
+
+const tiles = (arr, icons) => `      <div class="tiles">
+${arr.map((f, i) => `        <div class="tile">${icon(icons[i % icons.length], 'tile-i')}<div><div class="t">${f.title}</div><div class="d">${f.text}</div></div></div>`).join('\n')}
+      </div>`;
+
+const cites = () => `      <ol class="cites">
+${d.sources.map((s, i) => `        <li><span class="n">${i + 1}</span><div><a href="${s.url}" target="_blank" rel="nofollow noopener">${s.label}</a><code>${t(s.text)}</code></div></li>`).join('\n')}
+      </ol>`;
+
+const followups = (base = '') => `    <div class="followups">
+      <div class="fh">${icon('help', 'fh-i')}你可能还想问</div>
+      <div class="chips">
+${d.followups.map((f) => `        <a class="chip" href="${f.href.startsWith('#') ? base + f.href : f.href}">${f.text}<span aria-hidden="true">→</span></a>`).join('\n')}
+      </div>
+    </div>
+`;
+
+const nextCard = () => `    <div class="next">
+      <div class="next-t">${icon('phone', 'next-i')}下一步：打开带邀请码的官方注册页</div>
+      <p>入口打开后自动携带邀请码 <b>${d.meta.code}</b>，落在 <code>${t('{{officialHost}}')}</code>。手机号只在官方页面里提交，本站不收集。完整步骤见 <a href="/zhuce/">注册教程</a>。</p>
+      <div class="ctas">
+        <a class="btn" href="${d.meta.entry}" rel="nofollow noopener">打开注册入口</a>
+        <a class="btn ghost" href="/zhuce/">看五步流程</a>
+      </div>
+    </div>
+`;
+
+const digest = () => [
+  `VMOMENT 注册要点（${d.meta.host}，${d.disclosure.short}）`,
+  `邀请码：${d.meta.code}`,
+  `直达入口：${d.meta.entry}`,
+  `结论：${t(d.answer.lead).replace(/<[^>]+>/g, '')}`,
+  ...d.answer.points.map((p, i) => `${i + 1}. ${t(p).replace(/<[^>]+>/g, '')}`),
+  `注册流程（${d.meta.verifiedOn} 实测）：`,
+  ...d.steps.map((s, i) => `${i + 1}. ${t(s.name)}：${t(s.text).replace(/<[^>]+>/g, '')}`),
+  `可核验信息：`,
+  ...d.verifyRows.map((r) => `- ${r.k}：${t(r.v).replace(/<[^>]+>/g, '')}（${t(r.src)}）`),
+  d.verifyNote.replace(/<[^>]+>/g, ''),
+  `来源：${d.sources.map((s) => s.url).join(' ')}`,
+  d.disclosure.noClaim,
+  `原文：${d.meta.origin}/`
+].join('\n');
 
 const steps = (arr) => `      <ol class="steps">
 ${arr.map((s) => `        <li><span class="st">${t(s.name)}</span><p>${t(s.text)}</p></li>`).join('\n')}
@@ -109,84 +190,78 @@ const homeSections = () => {
   let i = 0;
   const n = () => ++i;
   return `${sec('look', n(), '官方注册页打开后长这样',
-`      <p>用邀请码进入官方页面后，你看到的应该是一个<b>对话式界面</b>，而不是表单。核对下面这段文案，就能确认自己进的是带码的入口：</p>
-${device()}`)}
+`        <p>用邀请码进入官方页面后，你看到的应该是一个<b>对话式界面</b>，而不是表单。核对下面这段文案，就能确认自己进的是带码的入口：</p>
+${device()}`, 'chat')}
 
 ${sec('register', n(), 'vmoment 怎么注册（实测流程）',
-`      <p>按 ${t('{{verifiedOn}}')} 实际打开官方注册页整理的五步。页面<b>没有邀请码输入栏</b>，码在链接参数 <code>invitationCode</code> 里：</p>
+`        <p>按 ${t('{{verifiedOn}}')} 实际打开官方注册页整理的五步。页面<b>没有邀请码输入栏</b>，码在链接参数 <code>invitationCode</code> 里：</p>
 ${steps(d.steps)}
-      <div class="note"><p>通过邀请码 <code>${d.meta.code}</code> 注册可加入新手社群，遇到问题更容易问到。逐步说明与流程图见 <a href="/zhuce/">注册教程</a>。</p></div>`)}
+        <div class="note"><p>通过邀请码 <code>${d.meta.code}</code> 注册可加入新手社群，遇到问题更容易问到。逐步说明与流程图见 <a href="/zhuce/">注册教程</a>。</p></div>`, 'list')}
 
 ${sec('platform', n(), 'VMOMENT（v-moment）平台能力',
-`      <p>${d.positioning}</p>
-      <div class="stats">
-${d.stats.map((s) => `        <div class="stat"><div class="v">${s.value}</div><div class="u">${s.unit}</div><div class="n">${s.note}</div></div>`).join('\n')}
-      </div>
-      <div class="grid">
-${d.features.map((f) => `        <div class="card"><div class="t">${f.title}</div><div class="d">${f.text}</div></div>`).join('\n')}
-      </div>
-      <p class="caption">以上为平台公开口径，未经独立审计。</p>`)}
+`        <p>${d.positioning}</p>
+        <div class="stats">
+${d.stats.map((s, k) => `          <div class="stat">${icon(['globe', 'meeting', 'avatar', 'feed'][k % 4], 'stat-i')}<div class="v">${s.value}</div><div class="u">${s.unit}</div><div class="n">${s.note}</div></div>`).join('\n')}
+        </div>
+${tiles(d.features, FEATURE_ICONS)}
+        <p class="caption">以上为平台公开口径，未经独立审计。<a href="#sources">查看来源</a></p>`, 'grid')}
 
 ${sec('verify', n(), '运营主体与可核验信息',
-`      <p>下面几条都能在官方系统里自己复核，是编号，不是本站的评价：</p>
-      <table>
-        <thead><tr><th scope="col">项目</th><th scope="col">内容</th><th scope="col">在哪复核</th></tr></thead>
-        <tbody>
-${d.verifyRows.map((r) => `          <tr><th scope="row">${r.k}</th><td>${t(r.v)}</td><td class="src">${t(r.src)}</td></tr>`).join('\n')}
-        </tbody>
-      </table>
-      <div class="warn"><p>${d.verifyNote}</p></div>`)}
+`        <p>下面几条都能在官方系统里自己复核，是编号，不是本站的评价：</p>
+        <table>
+          <thead><tr><th scope="col">项目</th><th scope="col">内容</th><th scope="col">在哪复核</th></tr></thead>
+          <tbody>
+${d.verifyRows.map((r) => `            <tr><th scope="row">${r.k}</th><td>${t(r.v)}</td><td class="src">${t(r.src)}</td></tr>`).join('\n')}
+          </tbody>
+        </table>
+        <div class="warn"><p>${d.verifyNote}</p></div>`, 'shield')}
 
 ${sec('usage', n(), 'vmoment 怎么用',
-`      <ul class="ticks">
-${d.usage.map((u) => `        <li><b>${u.title}</b>：${u.text}</li>`).join('\n')}
-      </ul>
-      <h3>新手入门建议</h3>
-      <p>${d.newbie}</p>
-      <h3>关于「大健康社交」</h3>
-      <p>${d.healthNote}</p>
-      <h3>下载教程</h3>
-      <p>${d.download.ios}${d.download.android}</p>`)}
+`${tiles(d.usage, USAGE_ICONS)}
+        <h3>新手入门建议</h3>
+        <p>${d.newbie}</p>
+        <h3>关于「大健康社交」</h3>
+        <p>${d.healthNote}</p>
+        <h3>下载教程</h3>
+        <p>${d.download.ios}${d.download.android}</p>`, 'book')}
 
 ${sec('islegit', n(), 'vmoment 是正规平台吗？自己核验三步',
-`      <p>可核验编号见上一节。剩下的判断留给你，这三步都能免费完成：</p>
-      <ol class="steps">
-${d.checks.map((c) => `        <li><p>${t(c)}</p></li>`).join('\n')}
-      </ol>`)}
+`        <p>可核验编号见上一节。剩下的判断留给你，这三步都能免费完成：</p>
+        <ol class="steps">
+${d.checks.map((c) => `          <li><p>${t(c)}</p></li>`).join('\n')}
+        </ol>`, 'badge')}
 
 ${sec('tiens', n(), '天狮 / TIENS 和 VMOMENT 是什么关系？',
-`      <p>先给结论：<b>${d.tiens.conclusion}</b></p>
-      <p>${t(d.tiens.lead)}</p>
-      <table>
-        <thead><tr><th scope="col">要分清的两件事</th><th scope="col">公开可查到的</th></tr></thead>
-        <tbody>
-${d.tiens.rows.map((r) => `          <tr><th scope="row">${t(r.k)}</th><td>${t(r.v)}</td></tr>`).join('\n')}
-        </tbody>
-      </table>
-      <p>两家是否有关，本站<b>没有</b>查到任何商标授权书、主体关系证明或官方公告可以证明，所以本页不写「天狮旗下」，也不写「TIENS 官方项目」。</p>
-      <div class="warn"><p>${t(d.tiens.warn)}</p></div>
-      <p>${d.tiens.homophone}</p>`)}
+`        <div class="verdict">${icon('link', 'verdict-i')}<p>先给结论：<b>${d.tiens.conclusion}</b></p></div>
+        <p>${t(d.tiens.lead)}</p>
+        <table>
+          <thead><tr><th scope="col">要分清的两件事</th><th scope="col">公开可查到的</th></tr></thead>
+          <tbody>
+${d.tiens.rows.map((r) => `            <tr><th scope="row">${t(r.k)}</th><td>${t(r.v)}</td></tr>`).join('\n')}
+          </tbody>
+        </table>
+        <p>两家是否有关，本站<b>没有</b>查到任何商标授权书、主体关系证明或官方公告可以证明，所以本页不写「天狮旗下」，也不写「TIENS 官方项目」。</p>
+        <div class="warn"><p>${t(d.tiens.warn)}</p></div>
+        <p>${d.tiens.homophone}</p>`, 'link')}
 
 ${sec('faq', n(), '常见问题',
-`      <div class="faq">
-${d.faq.map((f) => `        <details><summary>${f.q}</summary><div><p>${t(f.a)}</p></div></details>`).join('\n')}
-      </div>`)}
+`        <div class="faq">
+${d.faq.map((f, k) => `          <details id="q-${k + 1}"><summary>${f.q}</summary><div><p>${t(f.a)}</p></div></details>`).join('\n')}
+        </div>`, 'help')}
 
 ${sec('sources', n(), '参考来源',
-`      <p>本页的主体与资质信息取自以下公开页面，均为第三方来源，非官方声明；如与官方公示不一致，以官方为准。</p>
-      <ul class="ticks">
-${d.sources.map((s) => `        <li><a href="${s.url}" target="_blank" rel="nofollow noopener">${s.label}</a><br><code>${t(s.text)}</code></li>`).join('\n')}
-      </ul>`)}
+`        <p>本页的主体与资质信息取自以下公开页面，均为第三方来源，非官方声明；如与官方公示不一致，以官方为准。</p>
+${cites()}`, 'source')}
 `;
 };
 
 const toc = (base = '') => `    <aside class="toc" aria-label="目录">
       <div class="inner">
-        <div class="h">目录</div>
+        <div class="h">${icon('list', 'toc-i')}本页目录</div>
 ${d.toc.map((x) => `        <a href="${base}${x.href}">${x.text}</a>`).join('\n')}
-        <div class="card">
+        <div class="keycard">
           <div class="h">关键信息</div>
-          <p style="margin:0"><b>邀请码 ${d.meta.code}</b><br>直达入口 <a href="${d.meta.entry}">${t('{{entryHost}}')}</a><br>官方页实测 ${t('{{verifiedOn}}')}</p>
+          <p><b>邀请码 ${d.meta.code}</b><br>直达入口 <a href="${d.meta.entry}">${t('{{entryHost}}')}</a><br>官方页实测 ${t('{{verifiedOn}}')}</p>
         </div>
       </div>
     </aside>
@@ -215,15 +290,28 @@ const footer = (base = '') => `<footer>
 
 const scripts = () => `<script>
 (function(){
-  var b=document.getElementById('copy');
-  if(b&&navigator.clipboard&&window.isSecureContext){
+  var ANSWER=${JSON.stringify(digest())};
+  function flash(btn,txt){
+    var s=btn.querySelector('.btn-t');if(!s)return;
+    var o=s.textContent;s.textContent=txt;
+    setTimeout(function(){s.textContent=o;},1800);
+  }
+  function bind(id,getText,okText){
+    var b=document.getElementById(id);
+    if(!b||!navigator.clipboard||!window.isSecureContext)return;
     b.addEventListener('click',function(){
-      navigator.clipboard.writeText(b.dataset.code).then(function(){
-        var o=b.textContent;b.textContent='已复制 '+b.dataset.code;
-        setTimeout(function(){b.textContent=o;},1800);
-      },function(){});
+      navigator.clipboard.writeText(getText(b)).then(function(){flash(b,okText);},function(){});
     });
   }
+  bind('copy',function(b){return b.dataset.code;},'已复制邀请码');
+  bind('copyAnswer',function(){return ANSWER;},'已复制，可直接粘贴');
+  function openHash(){
+    var h=decodeURIComponent(location.hash.slice(1));if(!h)return;
+    var el=document.getElementById(h);
+    if(el&&el.tagName==='DETAILS'){el.open=true;el.scrollIntoView({block:'center'});}
+  }
+  openHash();
+  addEventListener('hashchange',openHash);
   var tg=document.getElementById('theme');
   if(tg)tg.addEventListener('click',function(){
     var cur=document.documentElement.getAttribute('data-theme');
@@ -348,31 +436,46 @@ const zhucePage = () => `${head({
   ld: zhuceLd(),
   ogType: 'article'
 })}${header('/')}
+<div class="band">
+  <div class="shell hero">
+    <div class="ask">${icon('ask', 'ask-i')}<p>注册 VMOMENT 时，邀请码 ${d.meta.code} 怎么带上、怎么确认真带上了？</p></div>
+    <article class="answer" aria-label="答案摘要">
+      <div class="answer-h">
+        <span class="badge">${icon('spark', 'badge-i')}答案</span>
+        <span class="answer-meta">实测 ${t('{{verifiedOn}}')} · <a href="/">返回首页</a></span>
+      </div>
+      <h1 class="display">VMOMENT 怎么注册（官方注册页实测）</h1>
+      <p class="answer-lead">官方注册页是<b>对话式界面，没有邀请码输入栏</b>。邀请码 ${d.meta.code} 由 <a href="${d.meta.entry}">${t('{{entryHost}}')}</a> 的链接参数自动携带，助手文案里出现【${d.meta.code}】就说明生效。</p>
+      <ol class="points">
+${d.zhuceConfirm.slice(0, 3).map((c) => `        <li>${t(c)}</li>`).join('\n')}
+      </ol>
+      <div class="answer-f">
+        <a class="btn" href="${d.meta.entry}" rel="nofollow noopener">打开带邀请码的入口</a>
+        <button type="button" class="btn ghost" id="copy" data-code="${d.meta.code}">${icon('copy', 'btn-i')}<span class="btn-t">复制邀请码 ${d.meta.code}</span></button>
+        <button type="button" class="btn ghost" id="copyAnswer">${icon('copy', 'btn-i')}<span class="btn-t">复制整段答案</span></button>
+      </div>
+      <p class="answer-note">${d.disclosure.short} · 内容按 ${t('{{verifiedOn}}')} 实际打开官方注册页时看到的界面逐字整理。</p>
+    </article>
+  </div>
+</div>
 <div class="layout shell">
   <main id="main">
-    <div class="sec-h"><span class="idx">教程</span><h2 id="h-top">VMOMENT 怎么注册（${t('{{verifiedOn}}')} 实测）</h2></div>
-    <p class="lede" style="max-width:none">这一页只回答一个问题：注册 VMOMENT 时邀请码 ${d.meta.code} 怎么带上、怎么确认真带上了。内容按 ${t('{{verifiedOn}}')} 实际打开官方注册页时看到的界面逐字整理。</p>
-    <div class="ctas">
-      <a class="btn" href="${d.meta.entry}" rel="nofollow noopener">打开带邀请码的入口</a>
-      <a class="btn ghost" href="/">返回首页</a>
-    </div>
+${sec('z-look', 1, '页面实际长这样', device(), 'chat')}
 
-    <h3>一、页面实际长这样</h3>
-${device()}
+${sec('z-steps', 2, '五步流程', steps(d.steps), 'list')}
 
-    <h3>二、五步流程</h3>
-${steps(d.steps)}
+${sec('z-confirm', 3, '怎么确认码带上了',
+`        <ul class="ticks">
+${d.zhuceConfirm.map((c) => `          <li>${t(c)}</li>`).join('\n')}
+        </ul>`, 'badge')}
 
-    <h3>三、怎么确认码带上了</h3>
-    <ul class="ticks">
-${d.zhuceConfirm.map((c) => `      <li>${t(c)}</li>`).join('\n')}
-    </ul>
+${sec('z-faq', 4, '注册前后常见疑问',
+`        <div class="faq">
+${d.zhuceFaq.map((f, k) => `          <details id="q-${k + 1}"><summary>${f.q}</summary><div><p>${t(f.a)}</p></div></details>`).join('\n')}
+        </div>`, 'help')}
 
-    <h3>四、注册前后常见疑问</h3>
-    <div class="faq">
-${d.zhuceFaq.map((f) => `      <details><summary>${f.q}</summary><div><p>${t(f.a)}</p></div></details>`).join('\n')}
-    </div>
-
+${nextCard()}
+${followups('/')}
     <div class="warn"><p>${t(d.disclosure.long)}</p></div>
   </main>
   ${toc('/')}
@@ -388,7 +491,9 @@ const homePage = () => `${head({
 })}${header()}${hero()}
 <div class="layout shell">
   <main id="main">
-${homeSections()}  </main>
+${homeSections()}
+${nextCard()}
+${followups()}  </main>
   ${toc()}
 </div>
 ${footer()}${scripts()}`;
