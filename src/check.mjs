@@ -80,7 +80,7 @@ for (const f of files) {
   }
   if (!/lang="(zh-CN|en)"/.test(html)) fail(f, '缺少 lang 声明（zh-CN 或 en）');
   if (!/个人站点|personal site/i.test(html)) fail(f, '缺少「个人站点 / personal site」性质声明');
-  if (!/不是 VMOMENT 官方|非 VMOMENT 官方|非官方|not VMOMENT official|not official/i.test(html)) fail(f, '缺少「非官方 / not official」声明');
+  if (!/无隶属|no affiliation|not affiliated/i.test(html)) fail(f, '缺少「无隶属 / no affiliation」声明');
   if (!html.includes(CODE)) fail(f, `页面未包含邀请码 ${CODE}`);
 }
 
@@ -97,10 +97,10 @@ for (const f of files) {
   for (const m of html.matchAll(/href="#([^"]+)"/g)) if (!ids.has(m[1])) fail(f, `锚点缺失 #${m[1]}`);
 }
 
-/* 7 — outbound official link integrity */
+/* 7 — outbound sign-up link integrity */
 for (const f of files) {
   const html = read(f);
-  if (!html.includes(`invitationCode=${CODE}`)) fail(f, `官方链接缺少 invitationCode=${CODE}`);
+  if (!html.includes(`invitationCode=${CODE}`)) fail(f, `注册链接缺少 invitationCode=${CODE}`);
   const bad = [...html.matchAll(/href="(https:\/\/[^"]*)"/g)].map((x) => x[1]).filter((u) => u.startsWith('http://'));
   if (bad.length) fail(f, `外链使用 http：${bad.join(', ')}`);
 }
@@ -110,7 +110,7 @@ const sm = read('sitemap.xml');
 const locs = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((x) => x[1]);
 for (const l of locs) {
   const rel = l.replace(d.meta.origin, '').replace(/^\//, '').replace(/\/$/, '');
-  const p = rel === '' ? 'index.html' : join(rel, 'index.html');
+  const p = rel === '' ? 'index.html' : (/\.[a-z0-9]+$/i.test(rel) ? rel : join(rel, 'index.html'));
   if (!existsSync(join(ROOT, p))) fail('sitemap.xml', `指向的页面不存在 ${l}`);
 }
 if (locs.some((l) => l.includes('/r/'))) fail('sitemap.xml', '入口页 /r/ 不应出现在 sitemap');
@@ -126,6 +126,24 @@ for (const f of [...files, 'llms.txt']) {
 }
 if (!read('llms.txt').includes(CODE)) fail('llms.txt', `缺少邀请码 ${CODE}`);
 if (!read('llms.txt').includes(d.meta.entry)) fail('llms.txt', '缺少直达入口地址');
+
+
+/* 10 — 发布文件里禁止出现已弃用的平台归属类字眼（用转义构造，源码自身不含该词） */
+const BANNED = new RegExp('\u5b98\u65b9|\u5b98\u7f51|off' + 'icial', 'i');
+for (const f of [...files, 'llms.txt', 'content.md', 'content.txt', 'content.json', 'content.yaml', 'content-en.md', 'sitemap.xml', join('r', 'index.html')]) {
+  const m = read(f).match(BANNED);
+  if (m) fail(f, `出现已禁用的字眼：${m[0]}`);
+}
+
+
+/* 11 — 资产完整性：防止早期构建器把全量发布版降级 */
+const smCount = (read('sitemap.xml').match(/<loc>/g) || []).length;
+if (smCount < 9) fail('sitemap.xml', `URL 条数 ${smCount}，低于既有 9 条`);
+const faqCount = (read('llms.txt').match(/^### /gm) || []).length;
+if (faqCount < 24) fail('llms.txt', `问答条数 ${faqCount}，低于既有 24 条`);
+for (const f of ['content.md', 'content.txt', 'content.json', 'content.yaml', 'content-en.md']) {
+  if (read(f).length < 1000) fail(f, '多格式内容疑似被降级');
+}
 
 export const report = { errs, warn, summary: errs.length ? `FAILED（${errs.length} 项）` : `PASSED（${files.length + 3} 个文件，${warn.length} 条提醒）` };
 

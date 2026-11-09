@@ -280,7 +280,7 @@ h3 + p { margin-top: 0; }
 .steps .st { font-weight: 650; display: block; margin-bottom: .15rem; font-size: .95rem; }
 .steps p { margin: 0; color: var(--muted); font-size: var(--t-sm); line-height: 1.8; }
 
-/* ---------- official-page preview ---------- */
+/* ---------- invite-page preview ---------- */
 .device { background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-1); margin: var(--s4) 0 0; }
 .device .bar { display: flex; align-items: center; gap: var(--s3); padding: var(--s3) var(--s4); background: var(--surface-2); border-bottom: 1px solid var(--border); }
 .device .bar .nm { font-weight: 700; font-size: var(--t-sm); white-space: nowrap; }

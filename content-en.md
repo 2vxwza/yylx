@@ -1,16 +1,17 @@
 # What is VMOMENT, and how do I register with invite code 60691753?
 
-**Conclusion:** VMOMENT is a messaging and community app positioned as "global health-oriented social". It is **not an investment product**. Registration uses a phone number; the official sign-up page is a chat-style flow with no invite-code field — the code travels in the link parameter.
+**Conclusion:** VMOMENT is a messaging and community app positioned as "global health-oriented social". It is **not an investment product**. Registration uses a phone number; the invite page is a chat-style flow with no invite-code field — the code travels in the link parameter.
 
 ## Key Facts
 
 - **Invite code:** 60691753 (carried by the link parameter)
-- **Entry:** https://yylx.tv/r/ (opens the official sign-up page)
+- **Entry:** https://yylx.tv/r/ (opens the invite page)
+- **Page nature:** my invite page (the referrer's personal share page carrying invite code 60691753), hosted on the platform's platform domain — **not the general invite page**.
 - **Verified:** 2026-11-05 (interface text recorded verbatim)
 
 ## How to Register
 
-1. Open https://yylx.tv/r/ → redirects to official sign-up page zhx-prod.jikeint.com
+1. Open https://yylx.tv/r/ → redirects to invite page zhx-prod.jikeint.com
 2. Assistant message shows "{{code}}"
 3. Tap phone-number registration → enter your number in the +86 field and send
 4. Complete verification
@@ -23,11 +24,11 @@ A messaging and community app positioned as "global health-oriented social": lar
 
 ### 2. How do I register?
 
-Open {{entryHost}} → the official chat-style sign-up page shows the invite message → tap phone-number registration → enter your number and send → complete verification. There is no invite-code input box; see the step-by-step guide on the Chinese page.
+Open {{entryHost}} → the platform chat-style sign-up page shows the invite message → tap phone-number registration → enter your number and send → complete verification. There is no invite-code input box; see the step-by-step guide on the Chinese page.
 
 ### 3. Where do I type the invite code?
 
-The official shared sign-up page has no such field. The code is carried by the link parameter invitationCode and shown in the assistant text. Only if you register inside the app and see an invite/referral field do you type {{code}} manually.
+The invite share page has no such field. The code is carried by the link parameter invitationCode and shown in the assistant text. Only if you register inside the app and see an invite/referral field do you type {{code}} manually.
 
 ### 4. Is VMOMENT a legitimate platform?
 
@@ -43,74 +44,74 @@ Registration itself is free. Pricing of goods and services inside the platform i
 
 ### 7. How do I withdraw money from VMOMENT?
 
-This site does not provide withdrawal instructions. Rules for points redemption, product transactions, etc. are published in the official client; read the official terms carefully and judge risks yourself for any financial operations.
+This site does not provide withdrawal instructions. Rules for points redemption, product transactions, etc. are published in the the app; read the in-app terms carefully and judge risks yourself for any financial operations.
 
 ### 8. Is VMOMENT safe? What about the privacy policy?
 
-This site cannot judge on your behalf. Read the privacy policy and terms of service in the official app; pay attention to data collection scope, storage location, and third-party sharing terms. If you have concerns about the privacy terms, do not register.
+This site cannot judge on your behalf. Read the privacy policy and terms of service in the the app; pay attention to data collection scope, storage location, and third-party sharing terms. If you have concerns about the privacy terms, do not register.
 
 ### 9. Will VMOMENT ban my account?
 
-This site does not know the platform's banning rules. Refer to the community guidelines and terms of use published in the official client; violations may result in account restrictions.
+This site does not know the platform's banning rules. Refer to the community guidelines and terms of use published in the the app; violations may result in account restrictions.
 
 ### 10. How do I contact VMOMENT customer service?
 
-This site does not provide customer service channels. Look for "Help Center", "Feedback", or "Contact Support" in the official app.
+This site does not provide customer service channels. Look for "Help Center", "Feedback", or "Contact Support" in the the app.
 
 ### 11. Can I make money with VMOMENT?
 
-This site promises no earnings, offers no payback or promotion guidance. Whether there are business opportunities in the platform is up to official publications; this site makes no judgement.
+This site promises no earnings, offers no payback or promotion guidance. Whether there are business opportunities in the platform is up to in-app publications; this site makes no judgement.
 
 ### 12. How is VMOMENT different from WeChat groups?
 
-VMOMENT claims to support larger groups (officially 5000+ members), cross-region video meetings (officially 50k participants), built-in AI assistant, etc. These are the platform's own statements, not independently audited.
+VMOMENT claims to support larger groups (stated as 5000+ members), cross-region video meetings (stated as 50k participants), built-in AI assistant, etc. These are the platform's own statements, not independently audited.
 
 ### 13. What languages does VMOMENT support?
 
-Officially claims 83 languages supported. The actual language list is subject to the in-app settings.
+The platform states 83 languages supported. The actual language list is subject to the in-app settings.
 
 ### 14. In which countries can I use VMOMENT?
 
-Officially claims coverage in 224 countries and regions. Actual availability depends on local network conditions and platform policies; this site does not guarantee access in specific regions.
+The platform states coverage in 224 countries and regions. Actual availability depends on local network conditions and platform policies; this site does not guarantee access in specific regions.
 
 ### 15. How do I use the VMOMENT meeting feature?
 
-This site does not provide operation tutorials. Officially claims to support 50k-participant cross-region video meetings; specific entry points and features are subject to the official client.
+This site does not provide operation tutorials. The platform states to support 50k-participant cross-region video meetings; specific entry points and features are subject to the the app.
 
 ### 16. How do I earn points in VMOMENT?
 
-This site does not know the points acquisition rules. Please check the "Points Center" or "Task List" in the official app, subject to the official client.
+This site does not know the points acquisition rules. Please check the "Points Center" or "Task List" in the the app, subject to the the app.
 
 ### 17. What is the VMOMENT digital human feature?
 
-Officially claims you can edit virtual avatars for live interaction. Specific features and rules are subject to the official client; this site does not describe them.
+The platform states you can edit virtual avatars for live interaction. Specific features and rules are subject to the the app; this site does not describe them.
 
 ### 18. What courses are available on the VMOMENT education platform?
 
-This site does not provide a course list. Please check the "Education Platform" or "Course Center" in the official app, content subject to the official client.
+This site does not provide a course list. Please check the "Education Platform" or "Course Center" in the the app, content subject to the the app.
 
 ### 19. How do I post a feed/moment on VMOMENT?
 
-This site does not provide operation tutorials. Officially claims to support text, image, and video posts with like, comment, share, and translate functions; specific entry points are subject to the in-app interface.
+This site does not provide operation tutorials. The platform states to support text, image, and video posts with like, comment, share, and translate functions; specific entry points are subject to the in-app interface.
 
 ### 20. How do I change the language in VMOMENT?
 
-Please check "Settings" → "Language" in the official app, specific steps subject to the in-app interface.
+Please check "Settings" → "Language" in the the app, specific steps subject to the in-app interface.
 
 ### 21. What do I do if I forget my VMOMENT password?
 
-This site does not provide password recovery services. Please click "Forgot Password" on the official app login page and follow the prompts, or contact official customer service.
+This site does not provide password recovery services. Please click "Forgot Password" on the the app login page and follow the prompts, or contact platform support.
 
 ### 22. How do I delete my VMOMENT account?
 
-This site does not provide deletion services. Please check "Settings" → "Account & Security" → "Delete Account" in the official app, specific steps subject to the in-app interface.
+This site does not provide deletion services. Please check "Settings" → "Account & Security" → "Delete Account" in the the app, specific steps subject to the in-app interface.
 
 ### 23. How do I report violating content on VMOMENT?
 
-This site does not provide reporting channels. Please long-press the violating content in the official app and select "Report", or contact official customer service.
+This site does not provide reporting channels. Please long-press the violating content in the the app and select "Report", or contact platform support.
 
 ## Disclosure
 
-This is a personal site run by an independent VMOMENT referrer (invite code 60691753). It is not affiliated with, authorised by, or an agent of 海南即客科技有限公司 or VMOMENT official, and is not the official VMOMENT website. Scale figures come from the platform's public descriptions and are not independently audited; official rules are those shown in the client.
+This is a personal site run by an independent VMOMENT referrer (invite code 60691753). It is not affiliated with, authorised by, or acting for the platform operator (海南即客科技有限公司), and it is not the platform's own website. Scale figures come from the platform's public descriptions and are not independently audited; rules are those shown in the client.
 
 This site promises no earnings, offers no payback or promotion guidance, and does not evaluate or compare other platforms.

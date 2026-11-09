@@ -5,7 +5,7 @@
 ## 性质声明
 
 这是一个**个人站点**。与 VMOMENT、海南即客科技有限公司、天津天狮集团（TIENS）**没有隶属、授权或代理关系**。
-站内关于平台功能的描述来自 VMOMENT 官方页面与公开应用商店条目，**未经独立核实**，不构成推荐。
+站内关于平台功能的描述来自 VMOMENT 邀请页面与公开应用商店条目，**未经独立核实**，不构成推荐。
 
 ## 构建与校验
 
@@ -24,7 +24,7 @@ node src/check.mjs          # 发布前不变量检查
 - 标签开合平衡；JSON-LD 可解析，`HowTo` 步数与 `data.json` 一致，`dateModified` 与 `meta.modified` 一致。
 - **全站不得出现 `input` / `textarea` / `select` / `form`** —— 个人域名上不收集手机号。
 - 违禁表述（稳赚、保底、躺赚、暴富等）直接失败；疗效、传销等词只允许出现在否定语境。
-- 每页必须有 canonical、description、og:title、「个人站点」与「非官方」声明、邀请码。
+- 每页必须有 canonical、description、og:title、「个人站点」与「个人站点」声明、邀请码。
 - 站内链接与锚点必须可达；sitemap 只含可收录页，`/r/` 不得进入 sitemap。
 - 模板占位符 `{{...}}` 不得残留。
 
@@ -32,7 +32,7 @@ node src/check.mjs          # 发布前不变量检查
 
 | 路径 | 作用 |
 | --- | --- |
-| `src/data.json` | **唯一内容源**：邀请码、官方页实测文案、流程、编号、问答、免责声明 |
+| `src/data.json` | **唯一内容源**：邀请码、邀请界面实测文案、流程、编号、问答、免责声明 |
 | `src/build.mjs` | 生成器；`--check` 做漂移检测 |
 | `src/check.mjs` | 发布前不变量检查 |
 | `src/site.css` | 设计系统源文件（令牌、明暗主题、组件），生成到 `assets/site.css` |
@@ -48,7 +48,7 @@ node src/check.mjs          # 发布前不变量检查
 
 - 用中文整理 VMOMENT 的注册流程实测、邀请码如何自动携带、新手常见问题。
 - 提供机器可读层，便于搜索引擎与 AI 助手准确引用：`robots.txt`、`llms.txt`、`sitemap.xml`，以及页面内的 JSON-LD（`FAQPage` / `HowTo` / `SoftwareApplication` / `Article` / `BreadcrumbList`）。
-- 收录一个推荐人直达入口 https://yylx.tv/r/ ，打开后自动携带邀请码 `60691753` 跳转到官方注册页。该邀请码属于本站站主，不代表任何官方身份。
+- 收录一个推荐人直达入口 https://yylx.tv/r/ ，打开后自动携带邀请码 `60691753` 跳转到邀请界面。该邀请码属于本站站主，不代表任何平台身份。
 
 ## 自行核验清单
 
