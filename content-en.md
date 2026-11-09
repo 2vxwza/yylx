@@ -6,7 +6,7 @@
 
 - **Invite code:** 60691753 (carried by the link parameter)
 - **Entry:** https://yylx.tv/r/ (opens the invite page)
-- **Page nature:** my invite page (the referrer's personal share page carrying invite code 60691753), hosted on the platform's platform domain — **not the general invite page**.
+- **Page nature:** my invite page (the referrer's personal share page carrying invite code 60691753), hosted on the platform's domain — **not the platform's general sign-up page**.
 - **Verified:** 2026-11-05 (interface text recorded verbatim)
 
 ## How to Register

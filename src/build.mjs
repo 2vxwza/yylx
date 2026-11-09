@@ -3,6 +3,15 @@ import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+/* 早期骨架：运行会把全量发布文件降级（只剩 3 页 / 3 条 sitemap）。
+   日常维护请用 `node src/publish.mjs --sync`，它只重算 CSP 哈希与日期，不重建页面。 */
+if (!process.argv.includes('--force-legacy')) {
+  console.error('STOP: src/build.mjs 是早期骨架，运行会降级线上发布文件。');
+  console.error('请改用: node src/publish.mjs --sync');
+  console.error('确需运行旧生成器请显式加 --force-legacy，并自行核对 24 条 FAQ / 9 条 sitemap 是否还在。');
+  process.exit(1);
+}
+
 const SRC = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(SRC, '..');
 const d = JSON.parse(readFileSync(join(SRC, 'data.json'), 'utf8'));

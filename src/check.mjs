@@ -1,4 +1,5 @@
 import { readFileSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -143,6 +144,53 @@ const faqCount = (read('llms.txt').match(/^### /gm) || []).length;
 if (faqCount < 24) fail('llms.txt', `问答条数 ${faqCount}，低于既有 24 条`);
 for (const f of ['content.md', 'content.txt', 'content.json', 'content.yaml', 'content-en.md']) {
   if (read(f).length < 1000) fail(f, '多格式内容疑似被降级');
+}
+
+/* 12 — 内容同步 / CSP / 结构化数据 / 404（2026-11-09 迭代护栏） */
+const visibleFaq = (f) => (read(f).match(/<details id="q-\d+">/g) || []).length;
+const zhN = visibleFaq('index.html');
+const enN = visibleFaq(join('en', 'index.html'));
+if (zhN !== enN) fail(join('en', 'index.html'), `FAQ 条数 ${enN} 与首页 ${zhN} 不一致`);
+const llTitles = [...read('llms.txt').matchAll(/^### (.+)$/gm)].map((x) => x[1].trim());
+if (llTitles.length !== zhN) fail('llms.txt', `问答 ${llTitles.length} 条与首页 FAQ ${zhN} 条不一致`);
+const zhTitles = [...read('index.html').matchAll(/<summary>([^<]+)<\/summary>/g)].map((x) => x[1].trim());
+for (const t of zhTitles) if (!llTitles.includes(t)) warn.push(`llms.txt: 首页问题「${t}」未出现在 llms.txt`);
+
+for (const f of files) {
+  const html = read(f);
+  const m = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  if (!m) continue;
+  const graph = JSON.parse(m[1])['@graph'] || [];
+  for (const n of graph) {
+    if (Object.keys(n).length === 1 && n['@id']) fail(f, `JSON-LD 存在悬空空节点 ${n['@id']}`);
+  }
+  const faq = graph.find((n) => n['@type'] === 'FAQPage');
+  if (faq) {
+    const vis = [...html.matchAll(/<details id="q-\d+"><summary>([^<]+)<\/summary>/g)].length;
+    if (faq.mainEntity.length !== vis) fail(f, `FAQPage ${faq.mainEntity.length} 条与可见 ${vis} 条不一致`);
+  }
+  if (!/hreflang=/.test(html)) fail(f, '缺少 hreflang（中英互指）');
+}
+
+for (const f of [...files, join('r', 'index.html')]) {
+  const html = read(f);
+  const m = html.match(/<meta\s+http-equiv="Content-Security-Policy"\s+content="([^"]+)"/i);
+  if (!m) { fail(f, '缺少 CSP'); continue; }
+  const declared = [...m[1].matchAll(/'sha256-([^']+)'/g)].map((x) => x[1]).sort();
+  const blocks = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].map((x) => x[1]);
+  const actual = blocks.map((b) => createHash('sha256').update(b, 'utf8').digest('base64')).sort();
+  if (declared.join() !== actual.join()) {
+    fail(f, `CSP 哈希与实际脚本不一致（声明 ${declared.length} / 实际 ${actual.length}）；改完 HTML 请跑 node src/publish.mjs --sync`);
+  }
+}
+
+if (!existsSync(join(ROOT, '404.html'))) fail('404.html', '缺少自定义 404 页');
+else {
+  const p = read('404.html');
+  if (!/无隶属/.test(p) || !p.includes(CODE)) fail('404.html', '缺少个人站点声明或邀请码');
+}
+for (const f of ['content.md', 'content.txt', 'content.json', 'content.yaml', 'content-en.md']) {
+  if (!/无隶属|not affiliated|not authorized/i.test(read(f))) fail(f, '缺少个人站点/无隶属声明');
 }
 
 export const report = { errs, warn, summary: errs.length ? `FAILED（${errs.length} 项）` : `PASSED（${files.length + 3} 个文件，${warn.length} 条提醒）` };
